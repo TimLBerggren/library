@@ -1,0 +1,29 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#book-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.book-card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    font-weight: bold;
+    /* padding: 5px; */
+}
+
+footer {
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    justify-self: center;
+}

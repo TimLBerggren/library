@@ -11,13 +11,25 @@ function Book(title, author, pages, hasRead) {
 function addBookToLibrary(title, author, pages, hasRead) {
     const newBook = new Book(title, author, pages, hasRead);
     myLibrary.push(newBook);
-    console.log(`Added: ${newBook.title} by ${newBook.author}` ); //debugging output
 };
 
-function displayBooks(library) {
-    for (let i = 0; i < library.length; i++) {
-        console.table(library[i]);
-    };
+const displayBooks = (library) => {
+    const container = document.getElementById('book-container');
+    container.innerHTML = ''; //clears previous entries (no duplicates essentially)
+
+    library.forEach((book) => {
+        const bookCard = document.createElement('div');
+        bookCard.classList.add('book-card');
+        
+        bookCard.innerHTML = `
+            <h2>${book.title}</h2>
+            <p><strong>Author:</strong> ${book.author}</p>
+            <p><strong>Pages:</strong> ${book.pages}</p>
+            <p><strong>Status:</strong> ${book.hasRead ? 'Read' : 'Not read yet'}</p>
+        `;
+
+        container.appendChild(bookCard);
+    });
 };
 
 export { myLibrary, Book, addBookToLibrary, displayBooks};
