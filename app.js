@@ -14,4 +14,10 @@ function addBookToLibrary(title, author, pages, hasRead) {
     console.log(`Added: ${newBook.title} by ${newBook.author}` ); //debugging output
 };
 
-export { myLibrary, Book, addBookToLibrary};
+function displayBooks(library) {
+    for (let i = 0; i < library.length; i++) {
+        console.table(library[i]);
+    };
+};
+
+export { myLibrary, Book, addBookToLibrary, displayBooks};
