@@ -10,6 +10,8 @@ function Book(title, author, pages, hasRead) {
 
 function addBookToLibrary(title, author, pages, hasRead) {
     const newBook = new Book(title, author, pages, hasRead);
-    myLibrary.push(newBook)
+    myLibrary.push(newBook);
+    console.log(`Added: ${newBook.title} by ${newBook.author}` ); //debugging output
 };
 
+export { myLibrary, Book, addBookToLibrary};
