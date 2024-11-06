@@ -1,5 +1,3 @@
-import { myLibrary, addBookToLibrary, displayBooks } from './app.js';
-
 export const setUpEventListeners = () => {
     const dialog = document.querySelector("dialog");
     const showButton = document.querySelector("dialog + button");
