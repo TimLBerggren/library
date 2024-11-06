@@ -1,6 +1,8 @@
-const myLibrary = [];
+import { dialog, showButton, closeButton } from "./dom.js";
 
-function Book(title, author, pages, hasRead) {
+export const myLibrary = [];
+
+export function Book(title, author, pages, hasRead) {
     this.title = title;
     this.author = author;
     this.pages = pages;
@@ -8,12 +10,12 @@ function Book(title, author, pages, hasRead) {
     this.info = () => `${this.title} by ${this.author}, ${this.pages} pages, ${this.hasRead ? 'read' : 'not read yet'}`;
 };
 
-function addBookToLibrary(title, author, pages, hasRead) {
+export function addBookToLibrary(title, author, pages, hasRead) {
     const newBook = new Book(title, author, pages, hasRead);
     myLibrary.push(newBook);
 };
 
-const displayBooks = (library) => {
+export const displayBooks = (library) => {
     const container = document.getElementById('book-container');
     container.innerHTML = ''; //clears previous entries (no duplicates essentially)??????
 
@@ -31,13 +33,16 @@ const displayBooks = (library) => {
         container.appendChild(bookCard);
     });
 };
- 
-// function openForm() {
-//     document.getElementById("myForm").style.display = "block";
-//   }
-  
-//   function closeForm() {
-//     document.getElementById("myForm").style.display = "none";
-//   }
 
-export { myLibrary, Book, addBookToLibrary, displayBooks};
+// TESTING
+
+// "Show the dialog" button opens the dialog modally
+showButton.addEventListener("click", () => {
+  dialog.showModal();
+});
+
+// "Close" button closes the dialog
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});
+// TESTING

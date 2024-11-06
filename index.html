@@ -11,31 +11,36 @@
 <body>
     <script type="module" src="./app.js" defer></script>
     <script type="module" src="./bookRegistry.js" defer></script>
-
-    <button class="add-book" onclick="addBook()">New Book</button>
-    
-    <div class="form-popup" id="myForm">
-        <form action="/app.js" class="form-container">
-          <h1>New Book</h1>
-      
-          <label for="title"><b>Title</b></label>
-          <input type="text" placeholder="Enter title" name="title" required>
-      
-          <label for="author"><b>Author</b></label>
-          <input type="author" placeholder="Enter author" name="author" required>
-      
-          <label for="pages"><b>Number of pages</b></label>
-          <input type="pages" placeholder="Enter number of pages" name="pages" required>
-
-          <div>
-            <input type="checkbox" id="read" name="read" checked />
-            <label for="read">Read</label>
-          </div>
-
-          <button type="submit" class="btn">Submit</button>
-          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-        </form>
-      </div>
+      <!-- TESTING -->
+      <dialog>
+        <button autofocus>Close</button>
+        <p>
+          <div class="form-popup" id="myForm">
+          <form action="/app.js" class="form-container">
+            <h1>New Book</h1>
+        
+            <label for="title"><b>Title</b></label>
+            <input type="text" placeholder="Enter title" name="title" required>
+        
+            <label for="author"><b>Author</b></label>
+            <input type="author" placeholder="Enter author" name="author" required>
+        
+            <label for="pages"><b>Number of pages</b></label>
+            <input type="pages" placeholder="Enter number of pages" name="pages" required>
+  
+            <div>
+              <input type="checkbox" id="read" name="read" checked />
+              <label for="read">Read</label>
+            </div>
+  
+            <button type="submit" class="btn">Submit</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
+        </div>
+      </p>
+      </dialog>
+      <button>New Book</button>
+      <!-- TESTING -->
 
     <div id="book-container"></div>
     
