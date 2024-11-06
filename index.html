@@ -13,7 +13,6 @@
     <script type="module" src="./bookRegistry.js" defer></script>
 
       <dialog>
-        <button autofocus>Close</button>
         <p>
           <div class="form-popup" id="myForm">
             <form action="/app.js" class="form-container">
@@ -32,9 +31,10 @@
                 <input type="checkbox" id="read" name="read" checked />
                 <label for="read">Read</label>
               </div>
-    
+
               <button type="submit" class="btn">Submit</button>
-              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+              <button type="button">Close</button>
+
             </form>
           </div>
         </p>

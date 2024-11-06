@@ -1,7 +1,7 @@
 export const setUpEventListeners = () => {
     const dialog = document.querySelector("dialog");
     const showButton = document.querySelector("dialog + button");
-    const closeButton = document.querySelector("dialog button");
+    const closeButton = dialog.querySelector("button[type='button']");
     
     showButton.addEventListener("click", () => {
         dialog.showModal();
@@ -13,4 +13,3 @@ export const setUpEventListeners = () => {
         console.log("I am working!!");
     });
 };
-
