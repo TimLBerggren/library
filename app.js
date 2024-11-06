@@ -15,7 +15,7 @@ function addBookToLibrary(title, author, pages, hasRead) {
 
 const displayBooks = (library) => {
     const container = document.getElementById('book-container');
-    container.innerHTML = ''; //clears previous entries (no duplicates essentially)
+    container.innerHTML = ''; //clears previous entries (no duplicates essentially)??????
 
     library.forEach((book) => {
         const bookCard = document.createElement('div');
@@ -31,5 +31,13 @@ const displayBooks = (library) => {
         container.appendChild(bookCard);
     });
 };
+ 
+// function openForm() {
+//     document.getElementById("myForm").style.display = "block";
+//   }
+  
+//   function closeForm() {
+//     document.getElementById("myForm").style.display = "none";
+//   }
 
 export { myLibrary, Book, addBookToLibrary, displayBooks};

@@ -17,13 +17,14 @@ body {
 }
 
 button {
-    font-weight: bold;
-    /* padding: 5px; */
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+
 }
 
 footer {
-    font-weight: bold;
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    justify-self: center;
 }
+
+
