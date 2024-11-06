@@ -1,4 +1,4 @@
-import { dialog, showButton, closeButton } from "./dom.js";
+import { setUpEventListeners } from "./dom.js";
 
 export const myLibrary = [];
 
@@ -34,15 +34,4 @@ export const displayBooks = (library) => {
     });
 };
 
-// TESTING
-
-// "Show the dialog" button opens the dialog modally
-showButton.addEventListener("click", () => {
-  dialog.showModal();
-});
-
-// "Close" button closes the dialog
-closeButton.addEventListener("click", () => {
-  dialog.close();
-});
-// TESTING
+setUpEventListeners();

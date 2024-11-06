@@ -1,6 +1,18 @@
 import { myLibrary, addBookToLibrary, displayBooks } from './app.js';
 
-export const dialog = document.querySelector("dialog");
-export const showButton = document.querySelector("dialog + button");
-export const closeButton = document.querySelector("dialog button");
+export const setUpEventListeners = () => {
+    const dialog = document.querySelector("dialog");
+    const showButton = document.querySelector("dialog + button");
+    const closeButton = document.querySelector("dialog button");
+    
+    showButton.addEventListener("click", () => {
+        dialog.showModal();
+        console.log("I am working!");
+    });
+    
+    closeButton.addEventListener("click", () => {
+        dialog.close();
+        console.log("I am working!!");
+    });
+};
 
