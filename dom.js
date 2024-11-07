@@ -12,4 +12,6 @@ export const setUpEventListeners = () => {
         dialog.close();
         console.log("I am working!!");
     });
+
+    // TODO: allow form to be submitted when clicking the submit button and return the results into the bookRegistry. It should show as a new card on the page with the details the user filled in.
 };

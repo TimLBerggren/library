@@ -7,7 +7,6 @@ export function Book(title, author, pages, hasRead) {
     this.author = author;
     this.pages = pages;
     this.hasRead = hasRead;
-    this.info = () => `${this.title} by ${this.author}, ${this.pages} pages, ${this.hasRead ? 'read' : 'not read yet'}`;
 };
 
 export function addBookToLibrary(title, author, pages, hasRead) {
@@ -17,7 +16,7 @@ export function addBookToLibrary(title, author, pages, hasRead) {
 
 export const displayBooks = (library) => {
     const container = document.getElementById('book-container');
-    container.innerHTML = ''; //clears previous entries (no duplicates essentially)??????
+    container.innerHTML = ''; //clears previous entries (no duplicates essentially)?????? but does it?
 
     library.forEach((book) => {
         const bookCard = document.createElement('div');
