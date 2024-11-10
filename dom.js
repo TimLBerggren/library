@@ -1,3 +1,5 @@
+import { myLibrary, addBookToLibrary, displayBooks } from "./app.js";
+
 export const setUpEventListeners = () => {
     const dialog = document.querySelector("dialog");
     const showButton = document.querySelector("dialog + button");
@@ -23,7 +25,6 @@ export const setUpEventListeners = () => {
         const hasRead = form.read.checked;
 
         addBookToLibrary(title, author, pages, hasRead);
-
         displayBooks(myLibrary);
 
         form.reset();
