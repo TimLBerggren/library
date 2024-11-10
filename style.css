@@ -18,9 +18,11 @@ body {
 }
 
 button {
+    font-size: large;
     border-radius: 5px;
     font-family: 'Courier New', Courier, monospace;
     cursor: pointer;
+    margin-bottom: 5px;
 }
 
 .read-status {
