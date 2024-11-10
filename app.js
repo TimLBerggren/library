@@ -34,3 +34,7 @@ export const displayBooks = (library) => {
 };
 
 setUpEventListeners();
+
+
+// when a user click submit, the contents added in the fields will be pushed to myLibrary. 
+// a user should be able to remove the book from the library and updates the display
