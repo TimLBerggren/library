@@ -30,4 +30,13 @@ export const setUpEventListeners = () => {
         form.reset();
         dialog.close();
     });
+
+    const container = document.getElementById('book-container');
+    container.addEventListener("click", (event) => {
+        if (event.target.classList.contains('remove-book')) {
+            const index = event.target.getAttribute('data-index');
+            myLibrary.splice(index, 1);
+            displayBooks(myLibrary);
+        }
+    });
 };
