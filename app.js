@@ -16,7 +16,7 @@ export function addBookToLibrary(title, author, pages, hasRead) {
 
 export const displayBooks = (library) => {
     const container = document.getElementById('book-container');
-    container.innerHTML = ''; //clears previous entries (no duplicates essentially)?????? but does it?
+    container.innerHTML = '';
 
     library.forEach((book) => {
         const bookCard = document.createElement('div');
@@ -27,6 +27,7 @@ export const displayBooks = (library) => {
             <p><strong>Author:</strong> ${book.author}</p>
             <p><strong>Pages:</strong> ${book.pages}</p>
             <p><strong>Status:</strong> ${book.hasRead ? 'Read' : 'Not read yet'}</p>
+            <button><i class="fa fa-trash-o"></i></button>
         `;
 
         container.appendChild(bookCard);
@@ -34,7 +35,3 @@ export const displayBooks = (library) => {
 };
 
 setUpEventListeners();
-
-
-// when a user click submit, the contents added in the fields will be pushed to myLibrary. 
-// a user should be able to remove the book from the library and updates the display
