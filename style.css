@@ -23,10 +23,6 @@ button {
     cursor: pointer;
 }
 
-.remove-book {
-    flex-direction: row;
-}
-
 .read-status {
     appearance: none;
     -webkit-appearance: none;
