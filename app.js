@@ -27,7 +27,7 @@ export const displayBooks = (library) => {
             <h2>${book.title}</h2>
             <p><strong>Author:</strong> ${book.author}</p>
             <p><strong>Pages:</strong> ${book.pages}</p>
-            <p><strong>Status:</strong> ${book.hasRead ? 'Read' : 'Not read yet'}</p>
+            <p><strong>Read:</strong><input type="checkbox" class="read-status" data-index="${index}" ${book.hasRead ? 'checked' : ''}/></p>
             <button class="remove-book" data-index="${index}">Remove Book</button>
         `;
 
