@@ -25,6 +25,10 @@ button {
     margin-bottom: 5px;
 }
 
+.remove-book {
+    font-size: small;
+}
+
 .read-status {
     appearance: none;
     -webkit-appearance: none;
