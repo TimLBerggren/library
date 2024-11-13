@@ -1,4 +1,5 @@
 # Library App
+### Preview: https://timlberggren.github.io/library/
 ## Introduction
 This project is a simple library app created using JavaScript, HTML, and CSS. It’s designed to consolidate key front-end development concepts like object-oriented programming, DOM manipulation, and event handling. The app allows users to add, view, delete, and update the read status of books in a library.
 
