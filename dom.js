@@ -38,5 +38,12 @@ export const setUpEventListeners = () => {
             myLibrary.splice(index, 1);
             displayBooks(myLibrary);
         }
+    
+        if (event.target.classList.contains('read-status')) {
+            const index = event.target.getAttribute('data-index');
+            myLibrary[index].toggleReadStatus();
+            displayBooks(myLibrary);
+            console.log("read status updated")
+        }
     });
 };
