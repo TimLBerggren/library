@@ -43,7 +43,6 @@ export const setUpEventListeners = () => {
             const index = event.target.getAttribute('data-index');
             myLibrary[index].toggleReadStatus();
             displayBooks(myLibrary);
-            console.log("read status updated")
         }
     });
 };
